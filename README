@@ -1,0 +1,13 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=1772
+
+DAMOS tools provides support for several filetypes used by DAMOS:
+*.dcm, *.dcl, *.kgs
+
+It supports syntax highliting, indentation, commentify, tags, ...
+
+Tags:
+- if you want to create tags for your kgs- and osp-files you can use the configuration file tools/ctags.conf. Now you can jump from a kgs-file to the 'codesyntax' or the 'umrechnung'.
+
+'Umrechnung':
+- If you have osp-files for 'umrechnung' and you parsed it with ctags, you can get a set of example values by the command 'GetOspTestValues'
+- see :help damos for more information

@@ -1,0 +1,31 @@
+*damos.txt*      Funktinen fuer das Arbeiten mit DAMOS-Dateien
+
+DAMOS-Tools                                                *damos* *kgs* *osp*
+==============================================================================
+
+                                                                   *:PatchA2L*
+:PatchA2L                                                     A2L-File patchen
+
+Mit diesem Befehl wird ein 'make patch_a2l' durchgeführt. Nähere Informationen
+sind in der HTML-Dokumentation zu lesen.
+
+Wenn man sich im kgs-File auf einer Umrechnungsformel befindet können folgende
+Befehle ausgeführt werden:
+
+                                                            *:GetOspPhysValue*
+:GetOspPhysValue{Integer-Wert}    Ausgabe des physikalische Werts mit Einheit.
+
+                                                             *:GetOspIntValue*
+:GetOspIntValue{Phys-Wert}           Ausgabe des Integer Werts in dez und hex.
+
+                                                           *:GetOspTestValues*
+:GetOspTestValues                           Ausgabe eines Sets von Testwerten.
+
+Wenn man sich im kgs-File auf einem Kennwert-Namen befindet kann folgender 
+Befehl ausgeführt werden:
+
+                                                            *:GetKgsTestWertp*
+:GetKgsTestWertp      Ausgabe des Testwert als physikalischer Wert ausgegeben.
+
+==============================================================================
+vim:tw=78:ts=8:ft=help:norl:

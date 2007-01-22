@@ -1,0 +1,9 @@
+:GetKgsTestWertp	damos.txt	/*:GetKgsTestWertp*
+:GetOspIntValue	damos.txt	/*:GetOspIntValue*
+:GetOspPhysValue	damos.txt	/*:GetOspPhysValue*
+:GetOspTestValues	damos.txt	/*:GetOspTestValues*
+:PatchA2L	damos.txt	/*:PatchA2L*
+damos	damos.txt	/*damos*
+damos.txt	damos.txt	/*damos.txt*
+kgs	damos.txt	/*kgs*
+osp	damos.txt	/*osp*
