@@ -54,33 +54,36 @@ endif
 " function for gq command
 " -----------------------
 function KgsFormat()
-    let lstart = v:lnum
-    let lend = lstart + v:count - 1
-    while v:lnum <= lend
-        let level = GetKgsIndent()
-        let line = getline(v:lnum)
-        if level == s:levelSgFunktion
-            " nix tun
-        elseif level == s:levelBlock
-            " Definition eines Blocks
-            let list = matchlist(line, '^\s*\(\w\+\)\s\+\(\w\+;\?\)\s*\(.*\)\?\s*')
-            let NameId = printf('%s %s', list[1], list[2])
-            let line = printf('%-' . s:lenBlockNameId . 's %s', NameId, list[3])
-        elseif level == s:levelKeyword
-            " Parameter eines Blocks
-            let list = matchlist(line, '^\s*\(\w\+\)\s\+\(.\{-}\)\s\{-}\(;\)\?\(.*\)\?')
-            let line = printf('%-' . s:lenKeyword . 's %s%s%s', list[1], list[2], list[3], list[4])
-        else
-        endif
-        " delete leading spaces
-        let line = substitute(line, '^\s*\(.*\)', '\1', '')
-        " indent
-        let line = printf('%' . level . 's%s', '', line)
-        " delete trailing spaces
-        let line = substitute(line, '\(.\{-}\)\s*$', '\1', '')
-        call setline(v:lnum, line)
-        let v:lnum = v:lnum + 1
-    endwhile
+    if mode() !~ '[iR]'
+        " not in insert mode
+        let lstart = v:lnum
+        let lend = lstart + v:count - 1
+        while v:lnum <= lend
+            let level = GetKgsIndent()
+            let line = getline(v:lnum)
+            if level == s:levelSgFunktion
+                " nix tun
+            elseif level == s:levelBlock
+                " Definition eines Blocks
+                let list = matchlist(line, '^\s*\(\w\+\)\s\+\(\w\+;\?\)\s*\(.*\)\?\s*')
+                let NameId = printf('%s %s', list[1], list[2])
+                let line = printf('%-' . s:lenBlockNameId . 's %s', NameId, list[3])
+            elseif level == s:levelKeyword
+                " Parameter eines Blocks
+                let list = matchlist(line, '^\s*\(\w\+\)\s\+\(.\{-}\)\s\{-}\(;\)\?\(.*\)\?')
+                let line = printf('%-' . s:lenKeyword . 's %s%s%s', list[1], list[2], list[3], list[4])
+            else
+            endif
+            " delete leading spaces
+            let line = substitute(line, '^\s*\(.*\)', '\1', '')
+            " indent
+            let line = printf('%' . level . 's%s', '', line)
+            " delete trailing spaces
+            let line = substitute(line, '\(.\{-}\)\s*$', '\1', '')
+            call setline(v:lnum, line)
+            let v:lnum = v:lnum + 1
+        endwhile
+    endif
 endfunction
 
 " ------------

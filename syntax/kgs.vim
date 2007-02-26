@@ -9,6 +9,7 @@ execute('source ' . $VIMRUNTIME . '/syntax/c.vim')
 
 "syntax keyword kgsFunctions sg_funktion contained
 syntax keyword kgsFunctions     sg_funktion variante
+syntax keyword kgsDefinitions   fkt_bezeichner kgs_bezeichner ram_bezeichner
 syntax keyword kgsDefinitions   ram_groesse lok_ram_groesse kennwert kennlinie
 syntax keyword kgsDefinitions   gruppenkennlinie gruppenkennfeld gruppenstuetzstellen
 syntax keyword kgsDefinitions   kennfeld kennwerteblock systemkonstante
@@ -26,6 +27,7 @@ syntax keyword kgsKomponents    gruppenstuetzstellen_x gruppenstuetzstellen_y
 syntax keyword kgsKomponents    minp_x minp_y maxp_x maxp_y
 syntax keyword kgsKomponents    test_stuetzstellenp_x test_stuetzstellenp_y
 syntax keyword kgsKomponents    nicht_applizierbar
+syntax keyword kgsKomponents    deutsch
 
 
 highlight def link kgsFunctions Function
