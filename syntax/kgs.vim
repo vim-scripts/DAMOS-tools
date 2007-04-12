@@ -8,7 +8,7 @@
 execute('source ' . $VIMRUNTIME . '/syntax/c.vim')
 
 "syntax keyword kgsFunctions sg_funktion contained
-syntax keyword kgsFunctions     sg_funktion variante
+syntax keyword kgsFunctions     sg_funktion variante revision
 syntax keyword kgsDefinitions   fkt_bezeichner kgs_bezeichner ram_bezeichner
 syntax keyword kgsDefinitions   ram_groesse lok_ram_groesse kennwert kennlinie
 syntax keyword kgsDefinitions   gruppenkennlinie gruppenkennfeld gruppenstuetzstellen
