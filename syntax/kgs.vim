@@ -12,7 +12,7 @@ syntax keyword kgsFunctions     sg_funktion variante revision
 syntax keyword kgsDefinitions   fkt_bezeichner kgs_bezeichner ram_bezeichner
 syntax keyword kgsDefinitions   ram_groesse lok_ram_groesse kennwert kennlinie
 syntax keyword kgsDefinitions   gruppenkennlinie gruppenkennfeld gruppenstuetzstellen
-syntax keyword kgsDefinitions   kennfeld kennwerteblock systemkonstante
+syntax keyword kgsDefinitions   kennfeld kennwerteblock systemkonstante festkennlinie
 syntax keyword kgsRefgroessen   ref_ram_groesse ref_kenngroesse
 syntax keyword kgsKomponents    umrechnung codesyntax datentyp adressierschema
 syntax keyword kgsKomponents    bitanzahl element_anzahl bitbasis_typ bitposition
@@ -25,6 +25,7 @@ syntax keyword kgsKomponents    test_stuetzstellen_x test_stuetzstellen_y
 syntax keyword kgsKomponents    anzahl_test_stuetzstellen_x anzahl_test_stuetzstellen_y
 syntax keyword kgsKomponents    gruppenstuetzstellen_x gruppenstuetzstellen_y
 syntax keyword kgsKomponents    minp_x minp_y maxp_x maxp_y
+syntax keyword kgsKomponents    shift_x offset_x
 syntax keyword kgsKomponents    test_stuetzstellenp_x test_stuetzstellenp_y
 syntax keyword kgsKomponents    nicht_applizierbar
 syntax keyword kgsKomponents    deutsch
